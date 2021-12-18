@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/*
+ *Masterpiece by Andres Hernandez
+ */
+
 @Service
 public class UserService {
     @Autowired
@@ -105,5 +109,8 @@ public class UserService {
         } else {
             return usuario.get();
         }
+    }
+    public List<User>getByMonthBirthDay(String monthBirthDay){
+        return userRepository.getByMonthBirthtDay(monthBirthDay);
     }
 }

@@ -43,4 +43,14 @@ public class GadgetController {
     public boolean delete(@PathVariable("id") Integer id) {
         return gadgetService.delete(id);
     }
+
+    @GetMapping("/price/{price}")
+    public List<Gadget> getByPriceLessThanEqual(@PathVariable("price") double price){
+        return gadgetService.getByPriceLessThanEqual(price);
+    }
+
+    @GetMapping("/description/{description}")
+    public List<Gadget>findByDescriptionContainingIgnoreCase(@PathVariable("description") String description){
+        return gadgetService.findByDescriptionContainingIgnoreCase(description);
+    }
 }

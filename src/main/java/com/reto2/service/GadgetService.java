@@ -81,4 +81,12 @@ public class GadgetService {
         }).orElse(false);
         return aBoolean;
     }
+
+    public List<Gadget> getByPriceLessThanEqual(double price){
+        return clotheRepository.getByPriceLessThanEqual(price);
+    }
+
+    public List<Gadget> findByDescriptionContainingIgnoreCase(String description){
+        return clotheRepository.findByDescriptionContainingIgnoreCase(description);
+    }
 }
